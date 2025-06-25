@@ -30,9 +30,13 @@ function displayBooks() {
   const booksContainer = document.querySelector(".books-container");
   booksContainer.innerHTML = "";
 
+  const booksCollection = document.querySelector(".books-number");
+
   if (!myLibrary.length) {
+    booksCollection.textContent = `Number of Books ${myLibrary.length}`;
     document.querySelector(".empty-message").style.display = "block";
   } else {
+    booksCollection.textContent = `Number of Books: ${myLibrary.length}`;
     myLibrary.forEach((book) => {
       createCard(book, booksContainer);
     });

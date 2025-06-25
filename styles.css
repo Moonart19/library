@@ -30,6 +30,12 @@ header p {
   margin-bottom: 10px;
 }
 
+.books-number {
+  color: white;
+  font-size: 1.5em;
+  padding-left: 2rem;
+}
+
 .books-container {
   width: 50vw;
   margin: auto;
