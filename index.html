@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library of medieval</title>
+  </head>
+  <body>
+    <header>
+      <h1>The Library</h1>
+      <br />
+      <hr />
+      <br />
+      <p>Want to add new Book to the Library ?</p>
+      <button class="new-book-btn open-form">New Book</button>
+    </header>
+    <p class="empty-message">Library is Empty</p>
+    <div class="books-container"></div>
+    <div class="modal">
+      <form action="" method="get" id="signUpForm">
+        <fieldset>
+          <legend>Enter the Book's Details</legend>
+          <div class="form-col">
+            <label for="author">Author Name: </label>
+            <input type="text" id="author" name="author" />
+          </div>
+          <div class="form-col">
+            <label for="title">Book's Title: </label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-col">
+            <label for="pages">Number of pages: </label>
+            <input type="number" id="pages" name="pages" />
+          </div>
+          <div class="form-col">
+            <label for="check-read">Have you read it?</label>
+            <input type="checkbox" id="check-read" name="check-read" />
+          </div>
+          <div class="form-col">
+            <input type="submit" value="Submit" name="submit-form" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

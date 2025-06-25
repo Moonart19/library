@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "GodOfWar";
+  src: url("font-file/GodOfWar.woff2") format("woff2"),
+    url("font-file/GodOfWar.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: "GodOfWar", monospace;
+}
+
+header {
+  background-color: wheat;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.books-container {
+  width: 50vw;
+  margin: auto;
+  background-color: rgba(245, 222, 179, 0.46);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 2em;
+  border-radius: 1em;
+}
+
+.empty-message {
+  display: none;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.book-card {
+  position: relative;
+  width: 400px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 20% 0 20% 0;
+  border: 0.5rem solid #333;
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.author {
+  text-align: left;
+  color: darkgreen;
+}
+
+.pages {
+  font-size: 2rem;
+  color: darkgoldenrod;
+}
+
+.read-box {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  opacity: 0.6;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3rem 1rem / 3rem 1rem;
+}
+
+.new-book-btn,
+.delete-button {
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+  font-family: inherit;
+  background-color: rgba(229, 191, 65, 0.534);
+  cursor: pointer;
+}
+
+.new-book-btn:active,
+.delete-button:active {
+  opacity: 0.5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+form {
+  color: white;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 10% auto;
+}
+
+fieldset {
+  padding: 0.8em;
+}
+
+input {
+  font-size: 1.5em;
+}
+
+/* input::placeholder {
+  font-family: inherit;
+} */
+
+input[type="checkbox"] {
+  height: 40px;
+  width: 40px;
+  margin: auto;
+}
+
+input[type="submit"] {
+  font-size: inherit;
+  background-color: rgb(76, 171, 225);
+  border: none;
+  padding: 5px 0 5px 0;
+  color: white;
+  width: 30%;
+  cursor: pointer;
+  margin: auto;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 20px;
+}
