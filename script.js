@@ -1,22 +1,39 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  if (!new.target) {
-    throw Error("You must use new keyword for construction of object");
+// function Book(title, author, pages, read) {
+//   if (!new.target) {
+//     throw Error("You must use new keyword for construction of object");
+//   }
+
+//   this.id = crypto.randomUUID();
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+
+// Book.prototype.readStatus = function () {
+//   if (this.read === true) {
+//     return this.read;
+//   }
+// };
+
+class Book {
+  id;
+  constructor(title, author, pages, read) {
+    this.id = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
 
-  this.id = crypto.randomUUID();
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+  readStatus() {
+    if (this.read === true) {
+      return this.read;
+    }
+  }
 }
-
-Book.prototype.readStatus = function () {
-  if (this.read === true) {
-    return this.read;
-  }
-};
 
 function addBookToLibrary(title, author, pages, read) {
   const book = new Book(title, author, pages, read);
@@ -30,7 +47,7 @@ function displayBooks() {
   const booksContainer = document.querySelector(".books-container");
   booksContainer.innerHTML = "";
 
-  const booksCollection = document.querySelector(".books-number");
+  const booksCollection = document.querySelector(".books-counter");
 
   if (!myLibrary.length) {
     booksCollection.textContent = `Number of Books ${myLibrary.length}`;
